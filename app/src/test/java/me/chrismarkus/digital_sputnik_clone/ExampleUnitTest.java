@@ -1,4 +1,4 @@
-package me.chrismarkus.voyager;
+package me.chrismarkus.digital_sputnik_clone;
 
 import org.junit.Test;
 

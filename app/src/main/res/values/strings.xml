@@ -1,3 +1,28 @@
 <resources>
-    <string name="app_name">Digital-Sputnik-Clone</string>
+    <string name="app_name">Lightbar Control</string>
+    <string name="card1">Color</string>
+    <string name="slider1">Red</string>
+    <string name="slider1S">Red: 0</string>
+    <string name="slider2">Green</string>
+    <string name="slider2S">Green: 0</string>
+    <string name="slider3">Blue</string>
+    <string name="slider3S">Blue: 0</string>
+    <string name="card2">Intensity</string>
+    <string name="slider4">Intensity</string>
+    <string name="slider4S">Intensity: 0</string>
+    <string name="toggle_bttn">ON/OFF</string>
+    <string name="card3">Presets</string>
+    <string name="preset1">1</string>
+    <string name="preset2">2</string>
+    <string name="preset3">3</string>
+    <string name="preset4">4</string>
+    <string name="card4">Preset Animation</string>
+    <string name="anim1">Fade</string>
+    <string name="anim2">Snap</string>
+    <string name="slider5">Duration</string>
+    <string name="slider5S">Duration: 1 sec</string>
+    <string name="anim3">Strobe</string>
+    <string name="anim4">Strobe Fade</string>
+    <string name="battery">Battery</string>
+    <string name="reconnect">Reconnect</string>
 </resources>

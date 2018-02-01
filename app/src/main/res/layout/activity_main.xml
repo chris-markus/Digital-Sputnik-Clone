@@ -1,19 +1,520 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/master_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="me.chrismarkus.digital_sputnik_clone.MainActivity">
+    tools:context="me.chrismarkus.digital_sputnik_clone.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/snackbar_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="76dp">
+
+                <TextView
+                    android:id="@+id/card1_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/card1"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="0dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="3dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:contentPadding="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/color_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/slider1_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/slider1S"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <SeekBar
+                            android:id="@+id/slider1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="0dp"
+                            android:longClickable="true"
+                            android:max="255"
+                            android:onClick="slider1Val"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/slider1_text" />
+
+                        <TextView
+                            android:id="@+id/slider2_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/slider2S"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/slider1" />
+
+                        <SeekBar
+                            android:id="@+id/slider2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginStart="8dp"
+                            android:max="255"
+                            android:onClick="slider2Val"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                        <TextView
+                            android:id="@+id/slider3_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/slider3S"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/slider2" />
+
+                        <SeekBar
+                            android:id="@+id/slider3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginStart="8dp"
+                            android:max="255"
+                            android:onClick="slider3Val"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                        <View
+                            android:id="@+id/color_display"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginRight="24dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/slider3" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/card3"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="0dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="3dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:contentPadding="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/stretchLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toTopOf="@+id/stretchLayout2"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent">
+
+                            <ToggleButton
+                                android:id="@+id/preset_1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.25"
+                                android:hapticFeedbackEnabled="true"
+                                android:onClick="selectPreset"
+                                android:text="ToggleButton"
+                                android:textOff="@string/preset1"
+                                android:textOn="@string/preset1"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <ToggleButton
+                                android:id="@+id/preset_2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.25"
+                                android:hapticFeedbackEnabled="true"
+                                android:onClick="selectPreset"
+                                android:text="ToggleButton"
+                                android:textOff="@string/preset2"
+                                android:textOn="@string/preset2"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <ToggleButton
+                                android:id="@+id/preset_3"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.25"
+                                android:hapticFeedbackEnabled="true"
+                                android:onClick="selectPreset"
+                                android:text="ToggleButton"
+                                android:textOff="@string/preset3"
+                                android:textOn="@string/preset3"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <ToggleButton
+                                android:id="@+id/preset_4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.25"
+                                android:hapticFeedbackEnabled="true"
+                                android:onClick="selectPreset"
+                                android:text="ToggleButton"
+                                android:textOff="@string/preset4"
+                                android:textOn="@string/preset4"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/stretchLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toTopOf="@+id/stretchLayout2"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent">
+
+                            <ToggleButton
+                                android:id="@+id/preset_5"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.25"
+                                android:hapticFeedbackEnabled="true"
+                                android:onClick="selectPreset"
+                                android:text="ToggleButton"
+                                android:textOff="5"
+                                android:textOn="5"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <ToggleButton
+                                android:id="@+id/preset_6"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.25"
+                                android:hapticFeedbackEnabled="true"
+                                android:onClick="selectPreset"
+                                android:text="ToggleButton"
+                                android:textOff="6"
+                                android:textOn="6"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <ToggleButton
+                                android:id="@+id/preset_7"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.25"
+                                android:hapticFeedbackEnabled="true"
+                                android:onClick="selectPreset"
+                                android:text="ToggleButton"
+                                android:textOff="7"
+                                android:textOn="7"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <ToggleButton
+                                android:id="@+id/preset_8"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.25"
+                                android:hapticFeedbackEnabled="true"
+                                android:onClick="selectPreset"
+                                android:text="ToggleButton"
+                                android:textOff="8"
+                                android:textOn="8"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/card2_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/card2"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="0dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="3dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:contentPadding="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/color_layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/slider4_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/slider4S"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/color_display" />
+
+                        <SeekBar
+                            android:id="@+id/slider4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="8dp"
+                            android:max="255"
+                            android:onClick="slider4Val"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+                        <ToggleButton
+                            android:id="@+id/lightSwitch"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginRight="24dp"
+                            android:layout_marginStart="24dp"
+                            android:hapticFeedbackEnabled="true"
+                            android:longClickable="true"
+                            android:onClick="toggleLight"
+                            android:text="@string/toggle_bttn"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/slider4" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/card4"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="0dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="3dp"
+                    app:contentPadding="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/stretchLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent">
+
+                            <ToggleButton
+                                android:id="@+id/snapButton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.375"
+                                android:onClick="snapClick"
+                                android:text="Snap"
+                                android:textOff="Snap"
+                                android:textOn="Snap" />
+
+                            <ToggleButton
+                                android:id="@+id/fadeButton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.375"
+                                android:onClick="fadeClick"
+                                android:text="Fade"
+                                android:textOff="Fade"
+                                android:textOn="Fade" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/slider5_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/slider5S"
+                            android:textAlignment="center"
+                            android:textSize="18sp" />
+
+                        <SeekBar
+                            android:id="@+id/slider5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="0.375"
+                            android:max="9"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="8dp" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:clickable="true"
+            android:onClick="fabClick"
+            android:visibility="visible"
+            app:elevation="6dp"
+            app:fabSize="normal"
+            app:layout_anchor="@id/scrollView2"
+            app:layout_anchorGravity="bottom|right|end"
+            app:pressedTranslationZ="12dp"
+            app:srcCompat="@drawable/animation" />
+
+    </android.support.design.widget.CoordinatorLayout>
 
 </android.support.constraint.ConstraintLayout>
+
